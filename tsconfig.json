@@ -11,6 +11,18 @@
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
-		"sourceMap": true
+		"sourceMap": true,
+    "baseUrl": ".",
+    "paths":
+    {
+      "$lib": ["src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$components": ["src/components"],
+      "$components/*": ["src/components/*"],
+      "images": ["src/images"],
+      "images/*": ["src/images/*"],
+      "styles": ["src/styles"],
+      "styles/*": ["src/styles/*"]
+    }
 	}
 }
