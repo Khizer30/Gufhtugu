@@ -1,7 +1,7 @@
 {
 	"name": "gufhtugu",
 	"version": "1.0.0",
-  "type": "module",
+	"type": "module",
 	"private": false,
 	"scripts": 
   {
@@ -9,6 +9,13 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+	},
+  "dependencies": 
+  {
+		"@fontsource/epilogue": "^4.5.11",
+		"@fontsource/oxygen": "^4.5.9",
+		"@lottiefiles/svelte-lottie-player": "^0.3.0",
+		"firebase": "^9.17.1"
 	},
 	"devDependencies": 
   {

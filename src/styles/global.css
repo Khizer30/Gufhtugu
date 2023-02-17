@@ -1,1 +1,44 @@
 /* Default */
+h1
+{
+  cursor: default ;
+}
+
+p
+{
+  cursor: default ;
+}
+
+span
+{
+  cursor: default ;
+}
+
+.height90 
+{
+  min-height: 90vh ;
+}
+
+.height10 
+{
+  min-height: 10vh ;
+}
+
+.background 
+{
+  background: #1B262C ;
+}
+
+footer 
+{
+  min-height: 10vh ;
+  background: #1B262C ;
+}
+
+.footerSpan 
+{
+  color: var(--bs-white) ;
+  font-family: Epilogue, sans-serif ;
+  text-align: center ;
+  font-size: 0.75em ;
+}
