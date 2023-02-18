@@ -29,16 +29,17 @@ span
   background: #1B262C ;
 }
 
-footer 
+.scale
 {
-  min-height: 10vh ;
-  background: #1B262C ;
+  transition: all 200ms ease-in ;
 }
 
-.footerSpan 
+.scale:hover
 {
-  color: var(--bs-white) ;
-  font-family: Epilogue, sans-serif ;
-  text-align: center ;
-  font-size: 0.75em ;
+  transform: scale(0.90) ;
+}
+
+.scale:active
+{
+  transform: scale(0.95) ;
 }

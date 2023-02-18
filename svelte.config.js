@@ -7,14 +7,7 @@ const config =
 	preprocess: vitePreprocess(),
 	kit: 
   {
-		adapter: adapter(),
-    alias:
-    {
-      "images": "src/images",
-      "images/*": "src/images/*",
-      "styles": "src/styles",
-      "styles/*": "src/styles/*"
-    }
+		adapter: adapter()
 	}
 } ;
 
