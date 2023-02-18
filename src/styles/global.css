@@ -28,18 +28,3 @@ span
 {
   background: #1B262C ;
 }
-
-.scale
-{
-  transition: all 200ms ease-in ;
-}
-
-.scale:hover
-{
-  transform: scale(0.90) ;
-}
-
-.scale:active
-{
-  transform: scale(0.95) ;
-}
