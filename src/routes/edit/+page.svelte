@@ -45,7 +45,7 @@
 <div class="container-fluid background">
   <div class="row">
     <div class="col-md-6 d-flex justify-content-center align-items-center height90">
-      <form method="post" target="_self" enctype="multipart/form-data" class="d-flex flex-column justify-content-center align-items-center w-100">
+      <form on:submit|preventDefault={ send } method="post" target="_self" enctype="multipart/form-data" class="d-flex flex-column justify-content-center align-items-center w-100">
         <h1 class="h"> Edit Profile </h1>
 
         { #if message }
