@@ -75,6 +75,11 @@
   font-weight: bold ;
 }
 
+.navbarBtn2:focus
+{
+  outline: none ;
+}
+
 .navbarBtn2:active
 {
   transform: scale(0.90) ;

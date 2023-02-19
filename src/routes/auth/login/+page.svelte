@@ -3,9 +3,10 @@
   import Footer from "../../../components/Footer.svelte" ;
   import logo from "../../../images/logo_dark.webp" ;
 
-  // Sign In
-  async function signIn(): Promise<void>
+  // Log In
+  async function logIn(): Promise<void>
   {
+
   }
 </script>
 
@@ -25,7 +26,7 @@
     class="img-fluid loginImg" 
   />
   <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="d-flex justify-content-center align-items-center w-100">
-    <button type="button" on:click={ signIn } class="d-flex justify-content-center align-items-center loginBtn">
+    <button type="button" on:click={ logIn } class="d-flex justify-content-center align-items-center loginBtn">
       <i class="fab fa-google loginBtnIcon"></i> &nbsp; &nbsp; Google
     </button>
   </form>
@@ -78,6 +79,11 @@
 {
   background: #1B262C ;
   color: var(--bs-white) ;
+}
+
+.loginBtn:focus
+{
+  outline: none ;
 }
 
 .loginBtnIcon:active
