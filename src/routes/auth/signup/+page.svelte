@@ -160,6 +160,7 @@
 
 .txtInput:focus
 {
+  outline: none ;
   box-shadow: 1.75px 1.75px var(--bs-white) ;
 }
 
@@ -186,11 +187,11 @@
   font-size: 1em ;
   text-align: center ;
   background: #1B262C ;
+  color: var(--bs-white) ;
+  font-weight: normal ;
   border-radius: 5px ;
   width: 150px ;
   height: 37px ;
-  color: var(--bs-white) ;
-  font-weight: bold ;
   border: 1px solid var(--bs-white) ;
 
   transition: all 150ms ease-in ;
@@ -200,6 +201,7 @@
 {
   background: var(--bs-white) ;
   color: #1B262C ;
+  font-weight: bold ;
 }
 
 .btn:focus
@@ -232,6 +234,7 @@
 {
   background: #1B262C ;
   color: var(--bs-white) ;
+  font-weight: normal ;
 }
 
 .btn2:focus

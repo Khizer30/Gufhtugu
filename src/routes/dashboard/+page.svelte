@@ -53,10 +53,11 @@
   font-size: 1em ;
   text-align: center ;
   background: #1B262C ;
+  color: var(--bs-white) ;
+  font-weight: normal ;
   border-radius: 5px ;
   width: 100px ;
   height: 35px ;
-  color: var(--bs-white) ;
   border: 1px solid #1B262C ;
 
   transition: all 150ms ease-in ;

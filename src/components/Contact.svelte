@@ -19,11 +19,15 @@
 {
   width: 90% ;
   min-height: 5rem ;
+  font-size: 1em ;
   border: 1px solid var(--bs-white) ;
   border-radius: 10px ;
   padding: 0rem 1rem ;
   margin: 0.25rem 0rem ;
   text-decoration: none ;
+  background: #1B262C ;
+  color: var(--bs-gray-500) ;
+  font-weight: normal ;
 
   transition: all 200ms ease-in ;
 }
@@ -31,6 +35,8 @@
 .dashboardDiv:hover
 {
   background: var(--bs-white) ;
+  color: #1B262C ;
+  font-weight: bold ;
 }
 
 .dashboardDiv:active
@@ -52,8 +58,6 @@
 .dashboardP 
 {
   font-family: Epilogue, sans-serif ;
-  color: var(--bs-gray-500) ;
-  font-size: 1em ;
   margin: 0 ;
   text-align: right ;
 }

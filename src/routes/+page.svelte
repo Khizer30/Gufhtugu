@@ -1,16 +1,9 @@
 <script lang="ts">
-  import { goto } from "$app/navigation" ;
   import { Lottie } from "lottie-svelte" ;
   // ...
   import Footer from "../components/Footer.svelte" ;
 
   let user: boolean = false ;
-
-  // Redirect
-  async function redirect(): Promise<void>
-  {
-    await goto("/auth/login") ;
-  }
 </script>
 
 <svelte:head>
@@ -23,8 +16,8 @@
 { #if !user }
 <div class="container-fluid d-flex justify-content-end align-items-center height10">
   <div class="d-flex justify-content-evenly align-items-center navbarWidth">
-    <button type="button" on:click={ redirect } class="d-flex justify-content-center align-items-center navbarBtn2"> Log In </button>
-    <button type="button" on:click={ redirect } class="d-flex justify-content-center align-items-center navbarBtn2"> Sign Up </button>
+    <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Log In </a>
+    <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Sign Up </a>
   </div>
 </div>
 { /if }
@@ -63,7 +56,9 @@
   width: 100px ;
   height: 35px ;
   color: var(--bs-white) ;
+  font-weight: normal ;
   border: 1px solid #1B262C ;
+  text-decoration: none ;
 
   transition: all 150ms ease-in ;
 }

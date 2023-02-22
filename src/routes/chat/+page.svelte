@@ -62,6 +62,8 @@
 .navbarBtn 
 {
   background: #1B262C ;
+  color: var(--bs-white) ;
+  font-size: 1em ;
   min-width: 2.75rem ;
   max-width: 2.75rem ;
   min-height: 2.75rem ;
@@ -75,19 +77,18 @@
 
 .navbarBtn:hover
 {
-  transform: scale(0.90) ;
+  background: var(--bs-white) ;
+  color: #1B262C ;
 }
 
 .navbarBtn:active
 {
-  transform: scale(0.95) ;
+  transform: scale(0.90) ;
 }
 
 .navbarBtnIcon 
 {
   transform: rotate(180deg) ;
-  color: var(--bs-white) ;
-  font-size: 1em ;
   margin-right: 3px ;
 }
 
@@ -132,12 +133,15 @@
 
 .chatTxtInput:focus
 {
+  outline: none ;
   box-shadow: 2.5px 2.5px var(--bs-white) ;
 }
 
 .chatBtn2 
 {
   background: var(--bs-white) ;
+  color: #1B262C ;
+  font-size: 1.25em ;
   min-width: 2.75rem ;
   max-width: 2.75rem ;
   min-height: 2.75rem ;
@@ -150,18 +154,17 @@
 
 .chatBtn2:hover
 {
-  transform: scale(0.90) ;
+  background: #1B262C ;
+  color: var(--bs-white) ;
 }
 
 .chatBtn2:active
 {
-  transform: scale(0.95) ;
+  transform: scale(0.90) ;
 }
 
 .chatBtnIcon2 
 {
-  color: #1B262C ;
-  font-size: 1.25em ;
   margin-right: 3px ;
 }
 

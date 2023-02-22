@@ -127,130 +127,133 @@
 <Footer />
 
 <style>
-.h 
-{
-  color: var(--bs-white) ;
-  font-family: Oxygen, sans-serif ;
-  text-align: center ;
-  font-size: 2.25em ;
-  margin: 1rem 0rem ;
-  font-weight: bold ;
-}
-
-.span 
-{
-  color: var(--bs-white) ;
-  font-size: 0.9em ;
-  font-family: Epilogue, sans-serif ;
-  text-align: center ;
-}
-
-.txtInput 
-{
-  width: 75% ;
-  margin: 0.5rem 0rem ;
-  background: #1B262C ;
-  border-radius: 5px ;
-  border: 1px solid var(--bs-white) ;
-  font-family: Epilogue, sans-serif ;
-  text-align: left ;
-  font-size: 1em ;
-  color: var(--bs-white) ;
-}
-
-.txtInput:focus
-{
-  box-shadow: 1.75px 1.75px var(--bs-white) ;
-}
-
-.div 
-{
-  margin: 0.5rem 0rem ;
-  width: 75% ;
-}
-
-.divImg 
-{
-  min-width: 3.75rem ;
-  max-width: 3.75rem ;
-  min-height: 3.75rem ;
-  max-height: 3.75rem ;
-  border-radius: 100px ;
-  background: var(--bs-white) ;
-  border: 1px solid var(--bs-white) ;
-}
-
-.btn 
-{
-  font-family: Epilogue, sans-serif ;
-  font-size: 1em ;
-  text-align: center ;
-  background: #1B262C ;
-  border-radius: 5px ;
-  width: 150px ;
-  height: 37px ;
-  color: var(--bs-white) ;
-  font-weight: bold ;
-  border: 1px solid var(--bs-white) ;
-
-  transition: all 150ms ease-in ;
-}
-
-.btn:hover
-{
-  background: var(--bs-white) ;
-  color: #1B262C ;
-}
-
-.btn:focus
-{
-  outline: none ;
-}
-
-.btn:active
-{
-  transform: scale(0.90) ;
-}
-
-.btn2 
-{
-  font-family: Epilogue, sans-serif ;
-  font-size: 1em ;
-  text-align: center ;
-  background: var(--bs-white) ;
-  border-radius: 5px ;
-  width: 175px ;
-  height: 40px ;
-  color: #1B262C ;
-  font-weight: bold ;
-  border: 1px solid var(--bs-white) ;
-
-  transition: all 150ms ease-in ;
-}
-
-.btn2:hover
-{
-  background: #1B262C ;
-  color: var(--bs-white) ;
-}
-
-.btn2:focus
-{
-  outline: none ;
-}
-
-.btn2:active
-{
-  transform: scale(0.90) ;
-}
-
-.lottie
-{
-  width: 30rem ;
-}
-
-::placeholder
-{
-  color: var(--bs-gray-500) ;
-}
-</style>
+  .h 
+  {
+    color: var(--bs-white) ;
+    font-family: Oxygen, sans-serif ;
+    text-align: center ;
+    font-size: 2.25em ;
+    margin: 1rem 0rem ;
+    font-weight: bold ;
+  }
+  
+  .span 
+  {
+    color: var(--bs-white) ;
+    font-size: 0.9em ;
+    font-family: Epilogue, sans-serif ;
+    text-align: center ;
+  }
+  
+  .txtInput 
+  {
+    width: 75% ;
+    margin: 0.5rem 0rem ;
+    background: #1B262C ;
+    border-radius: 5px ;
+    border: 1px solid var(--bs-white) ;
+    font-family: Epilogue, sans-serif ;
+    text-align: left ;
+    font-size: 1em ;
+    color: var(--bs-white) ;
+  }
+  
+  .txtInput:focus
+  {
+    outline: none ;
+    box-shadow: 1.75px 1.75px var(--bs-white) ;
+  }
+  
+  .div 
+  {
+    margin: 0.5rem 0rem ;
+    width: 75% ;
+  }
+  
+  .divImg 
+  {
+    min-width: 3.75rem ;
+    max-width: 3.75rem ;
+    min-height: 3.75rem ;
+    max-height: 3.75rem ;
+    border-radius: 100px ;
+    background: var(--bs-white) ;
+    border: 1px solid var(--bs-white) ;
+  }
+  
+  .btn 
+  {
+    font-family: Epilogue, sans-serif ;
+    font-size: 1em ;
+    text-align: center ;
+    background: #1B262C ;
+    color: var(--bs-white) ;
+    font-weight: normal ;
+    border-radius: 5px ;
+    width: 150px ;
+    height: 37px ;
+    border: 1px solid var(--bs-white) ;
+  
+    transition: all 150ms ease-in ;
+  }
+  
+  .btn:hover
+  {
+    background: var(--bs-white) ;
+    color: #1B262C ;
+    font-weight: bold ;
+  }
+  
+  .btn:focus
+  {
+    outline: none ;
+  }
+  
+  .btn:active
+  {
+    transform: scale(0.90) ;
+  }
+  
+  .btn2 
+  {
+    font-family: Epilogue, sans-serif ;
+    font-size: 1em ;
+    text-align: center ;
+    background: var(--bs-white) ;
+    border-radius: 5px ;
+    width: 175px ;
+    height: 40px ;
+    color: #1B262C ;
+    font-weight: bold ;
+    border: 1px solid var(--bs-white) ;
+  
+    transition: all 150ms ease-in ;
+  }
+  
+  .btn2:hover
+  {
+    background: #1B262C ;
+    color: var(--bs-white) ;
+    font-weight: normal ;
+  }
+  
+  .btn2:focus
+  {
+    outline: none ;
+  }
+  
+  .btn2:active
+  {
+    transform: scale(0.90) ;
+  }
+  
+  .lottie
+  {
+    width: 30rem ;
+  }
+  
+  ::placeholder
+  {
+    color: var(--bs-gray-500) ;
+  }
+  </style>
