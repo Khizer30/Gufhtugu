@@ -14,6 +14,11 @@ span
   cursor: default ;
 }
 
+.height100
+{
+  min-height: 100vh ;
+}
+
 .height90 
 {
   min-height: 90vh ;
@@ -27,4 +32,19 @@ span
 .background 
 {
   background: #1B262C ;
+}
+
+.scale
+{
+  transition: all 250ms ease-in ;
+}
+
+.scale:hover
+{
+  transform: scale(0.93) ;
+}
+
+.scale:active
+{
+  transform: scale(0.97) ;
 }

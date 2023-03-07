@@ -2,6 +2,7 @@
   // ...
   import Contact from "../../components/Contact.svelte" ;
   import Footer from "../../components/Footer.svelte" ;
+  import { logOut } from "../../lib/auth" ;
   import userImg from "../../images/avatar.webp" ;
   import avatar from "../../images/avatar.webp" ;
 
@@ -36,7 +37,7 @@
     class="navbarSearch"
   />
 
-  <button type="button" class="d-flex justify-content-center align-items-center navbarBtn2"> Log Out </button>
+  <button type="button" on:click={ logOut } class="d-flex justify-content-center align-items-center navbarBtn2"> Log Out </button>
 </div>
 <div class="container-fluid d-flex flex-column justify-content-start align-items-center dashboardContainer">
   

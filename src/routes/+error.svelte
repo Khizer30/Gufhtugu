@@ -12,12 +12,14 @@
 </svelte:head>
 
 <div class="container-fluid d-flex flex-column justify-content-center align-items-center height90 background">
-  <Lottie
-    path="/lottie/error.json"
-    loop={ true }
-    autoplay={ true }
-    speed={ 1 }
-  />
+  <div class="scale">
+    <Lottie
+      path="/lottie/error.json"
+      loop={ true }
+      autoplay={ true }
+      speed={ 1 }
+    />
+  </div>
 </div>
 
 <Footer />

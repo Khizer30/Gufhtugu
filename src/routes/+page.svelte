@@ -28,12 +28,14 @@
       <h1 class="homeH"> Chat with your friends & family using <br /> <strong> Gufhtugu </strong> </h1>
     </div>
     <div class="col-md-6 d-flex justify-content-center align-items-center" style={ `min-height: ${ user ? "90" : "80" }vh ;` }>
-      <Lottie
-        path="/lottie/home.json"
-        loop={ true }
-        autoplay={ true }
-        speed={ 1 }
-      />
+      <div class="scale">
+        <Lottie
+          path="/lottie/home.json"
+          loop={ true }
+          autoplay={ true }
+          speed={ 1 }
+        />
+      </div>
     </div>
   </div>
 </div>

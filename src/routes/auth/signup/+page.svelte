@@ -112,7 +112,7 @@
       </form>
     </div>
     <div class="col-md-6 d-flex justify-content-center align-items-center height90">
-      <div class="lottie">
+      <div class="lottie scale">
         <Lottie
           path="/lottie/signup.json"
           loop={ true }
@@ -249,7 +249,7 @@
 
 .lottie
 {
-  width: 30rem ;
+  width: 27.5rem ;
 }
 
 ::placeholder

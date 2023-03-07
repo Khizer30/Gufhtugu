@@ -1,12 +1,20 @@
 <script lang="ts">
   // ...
   import Footer from "../../../components/Footer.svelte" ;
+  import { logIn } from "../../../lib/auth" ;
   import logo from "../../../images/logo_dark.webp" ;
 
-  // Log In
-  async function logIn(): Promise<void>
-  {
+  let message: string = "" ;
 
+  // Sign In
+  async function signIn(): Promise<void>
+  {
+    let result: boolean = await logIn() ;
+
+    if (!result)
+    {
+      message = "Please, Try Again!"
+    }
   }
 </script>
 
@@ -25,8 +33,15 @@
     draggable="false"
     class="img-fluid loginImg" 
   />
+
+  { #if message }
+  <span class="span"> { message } </span>
+  { :else }
+  <span class="span"> <br /> </span>
+  { /if }
+
   <form method="post" target="_self" enctype="application/x-www-form-urlencoded" class="d-flex justify-content-center align-items-center w-100">
-    <button type="button" on:click={ logIn } class="d-flex justify-content-center align-items-center loginBtn">
+    <button type="button" on:click={ signIn } class="d-flex justify-content-center align-items-center loginBtn">
       <i class="fab fa-google"></i> &nbsp; &nbsp; Google
     </button>
   </form>
@@ -38,7 +53,16 @@
 .loginImg 
 {
   width: 17rem ;
-  margin: 1.5rem 0rem ;
+  margin: 0.5rem 0rem ;
+}
+
+.span 
+{
+  color: var(--bs-white) ;
+  font-size: 0.9em ;
+  font-family: Epilogue, sans-serif ;
+  text-align: center ;
+  margin: 1rem 0rem ;
 }
 
 .loginBtn 
