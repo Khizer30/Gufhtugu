@@ -32,7 +32,7 @@
 { #if (user === undefined) }
   <Loading />
 { :else if (user === null) }
-  <slot />
+  { goto("/auth/login") }
 { :else }
-  { goto("/dashboard") }
+  <slot />
 { /if }

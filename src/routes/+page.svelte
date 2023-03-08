@@ -1,9 +1,33 @@
 <script lang="ts">
+  import { onMount, onDestroy } from "svelte" ;
+  import { onAuthStateChanged } from "firebase/auth" ;
   import { Lottie } from "lottie-svelte" ;
+  import type { Unsubscribe, User } from "firebase/auth" ;
   // ...
+  import Loading from "../components/Loading.svelte" ;
   import Footer from "../components/Footer.svelte" ;
+  import { auth } from "../config/firebase" ;
 
-  let user: boolean = false ;
+  let unsub: Unsubscribe | undefined = undefined ;
+  let user: User | null | undefined = undefined ;
+
+  // Redirect
+  onMount(() =>
+  {
+    unsub = onAuthStateChanged(auth, (x: User | null) =>
+    {
+      user = x ;
+    }) ;
+  }) ;
+
+  // Destructor
+  onDestroy(() =>
+  {
+    if (unsub)
+    {
+      unsub() ;
+    }
+  }) ;
 </script>
 
 <svelte:head>
@@ -13,34 +37,56 @@
   <meta name="keywords" content="Gufhtugu, Home" />
 </svelte:head>
 
-{ #if !user }
-<div class="container-fluid d-flex justify-content-end align-items-center height10">
-  <div class="d-flex justify-content-evenly align-items-center navbarWidth">
-    <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Log In </a>
-    <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Sign Up </a>
-  </div>
-</div>
-{ /if }
-
-<div class="container-fluid background">
-  <div class="row">
-    <div class="col-md-6 d-flex justify-content-center align-items-center" style={ `min-height: ${ user ? "90" : "80" }vh ;` }>
-      <h1 class="homeH"> Chat with your friends & family using <br /> <strong> Gufhtugu </strong> </h1>
+{ #if (user === undefined) }
+  <Loading />
+{ :else if (user === null) }
+  <div class="container-fluid d-flex justify-content-end align-items-center height10">
+    <div class="d-flex justify-content-evenly align-items-center navbarWidth">
+      <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Log In </a>
+      <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Sign Up </a>
     </div>
-    <div class="col-md-6 d-flex justify-content-center align-items-center" style={ `min-height: ${ user ? "90" : "80" }vh ;` }>
-      <div class="scale">
-        <Lottie
-          path="/lottie/home.json"
-          loop={ true }
-          autoplay={ true }
-          speed={ 1 }
-        />
+  </div>
+
+  <div class="container-fluid background">
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center align-items-center mh-80">
+        <h1 class="homeH"> Chat with your friends & family using <br /> <strong> Gufhtugu </strong> </h1>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center mh-80">
+        <div class="scale">
+          <Lottie
+            path="/lottie/home.json"
+            loop={ true }
+            autoplay={ true }
+            speed={ 1 }
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<Footer />
+  <Footer />
+{ :else }
+  <div class="container-fluid background">
+    <div class="row">
+      <div class="col-md-6 d-flex justify-content-center align-items-center mh-90">
+        <h1 class="homeH"> Chat with your friends & family using <br /> <strong> Gufhtugu </strong> </h1>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center align-items-center mh-90">
+        <div class="scale">
+          <Lottie
+            path="/lottie/home.json"
+            loop={ true }
+            autoplay={ true }
+            speed={ 1 }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+{ /if }
 
 <style>
 .navbarWidth 
@@ -89,5 +135,15 @@
   text-align: left ;
   font-size: 3em ;
   margin: 0rem 1rem ;
+}
+
+.mh-80
+{
+  min-height: 80vh ;
+}
+
+.mh-90
+{
+  min-height: 90vh ;
 }
 </style>
