@@ -4,8 +4,8 @@
   import { onAuthStateChanged } from "firebase/auth" ;
   import type { Unsubscribe, User } from "firebase/auth" ;
   // ...
-  import Loading from "../../components/Loading.svelte" ;
-  import { auth } from "../../config/firebase" ;
+  import Loading from "../../../components/Loading.svelte" ;
+  import { auth } from "../../../config/firebase" ;
 
   let unsub: Unsubscribe | undefined = undefined ;
   let user: User | null | undefined = undefined ;

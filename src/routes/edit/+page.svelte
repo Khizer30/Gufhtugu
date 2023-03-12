@@ -5,7 +5,6 @@
   import avatar from "../../images/avatar.webp" ;
 
   let name: string = "" ;
-  let username: string = "" ;
   let email: string = "" ;
   let file: FileList | null | undefined = undefined ;
   let message: string = "" ;
@@ -53,17 +52,6 @@
         { :else }
         <span class="span"> <br /> </span>
         { /if }
-        
-        <input
-          type="text"
-          bind:value={ username }
-          maxlength="100"
-          minlength="5"
-          placeholder="*Username"
-          required
-          autofocus
-          class="form-control txtInput"
-        />
 
         <input
           type="text"

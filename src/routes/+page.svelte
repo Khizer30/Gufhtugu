@@ -43,7 +43,6 @@
   <div class="container-fluid d-flex justify-content-end align-items-center height10">
     <div class="d-flex justify-content-evenly align-items-center navbarWidth">
       <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Log In </a>
-      <a href="/auth/login" class="d-flex justify-content-center align-items-center navbarBtn2"> Sign Up </a>
     </div>
   </div>
 
